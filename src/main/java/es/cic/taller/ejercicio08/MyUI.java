@@ -36,7 +36,15 @@ public class MyUI extends UI {
         setContent(layout);
         
         Baraja baraja = new Baraja();
+        Tapete manoTapete1 = baraja.getTapete();
+        Tapete manoTapete2 = baraja.getTapete();
+        Tapete manoTapete3 = baraja.getTapete();
+        Tapete manoTapete4 = baraja.getTapete();
         
+        tapete1.setTapete(manoTapete1);
+        tapete2.setTapete(manoTapete2);
+        tapete3.setTapete(manoTapete3);
+        tapete4.setTapete(manoTapete4);
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
