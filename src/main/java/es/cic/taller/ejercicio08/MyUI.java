@@ -1,5 +1,7 @@
 package es.cic.taller.ejercicio08;
 
+import java.util.Collections;
+
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.Theme;
@@ -48,7 +50,9 @@ public class MyUI extends UI {
         layout.addComponent(sample);
         setContent(layout);
         
+        
         Baraja baraja = new Baraja();
+
         Tapete manoTapete1 = baraja.getTapete();
         Tapete manoTapete2 = baraja.getTapete();
         Tapete manoTapete3 = baraja.getTapete();

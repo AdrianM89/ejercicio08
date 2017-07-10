@@ -1,6 +1,7 @@
 package es.cic.taller.ejercicio08;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Baraja {
@@ -16,6 +17,7 @@ public class Baraja {
 		
 	}
 	
+	
 	public List<Carta> getPalo(String palo){
 		List<Carta> listaCartasPalo = new ArrayList<>();
 		for(int i= 1; i <= 10; i++) {
@@ -23,8 +25,11 @@ public class Baraja {
 			carta.setNumero(i);
 			carta.setPalo(palo);
 			listaCartasPalo.add(carta);
+			
 		}
+		Collections.shuffle(listaCartas);
 		return listaCartasPalo;
+		
 	}
 	
 	public Tapete getTapete() {
@@ -33,7 +38,7 @@ public class Baraja {
 		tapete.setCarta2(listaCartas.get(posicion++));
 		tapete.setCarta3(listaCartas.get(posicion++));
 		tapete.setCarta4(listaCartas.get(posicion++));
-	
+
 		return tapete;
 	}
 }
