@@ -18,7 +18,7 @@ public class Baraja {
 	
 	public List<Carta> getPalo(String palo){
 		List<Carta> listaCartasPalo = new ArrayList<>();
-		for(int i=1, i<=10, i++) {
+		for(int i= 1; i <= 10; i++) {
 			Carta carta = new Carta();
 			carta.setNumero(i);
 			carta.setPalo(palo);
@@ -29,6 +29,11 @@ public class Baraja {
 	
 	public Tapete getTapete() {
 		Tapete tapete = new Tapete();
-		tapete.setCarta1(carta1);
+		tapete.setCarta1(listaCartas.get(posicion++));
+		tapete.setCarta2(listaCartas.get(posicion++));
+		tapete.setCarta3(listaCartas.get(posicion++));
+		tapete.setCarta4(listaCartas.get(posicion++));
+	
+		return tapete;
 	}
 }
